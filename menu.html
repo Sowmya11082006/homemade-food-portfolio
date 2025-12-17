@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<script>
+if (!localStorage.getItem("loggedIn")) {
+  window.location.href = "login.html";
+}
+</script>
+
+<nav class="navbar">
+  <h2>🍱 Home Made Food</h2>
+  <div class="nav-right">
+    <a href="about.html">About & Contact</a>
+    <button onclick="logout()">Logout</button>
+  </div>
+</nav>
+
+<div class="main-container">
+
+  <div class="menu-grid">
+
+    <div class="menu-card">
+      <img src="C:\Users\DELL\OneDrive\Desktop\homemade-food\images\zoshua-colah-4pT9e68P_mU-unsplash.jpg">
+      <h4>Veg Meals</h4>
+      <p>₹80</p>
+      <button class="add-btn" onclick="addToCart('Veg Meals',80)">Add</button>
+    </div>
+
+    <div class="menu-card">
+      <img src="C:\Users\DELL\OneDrive\Desktop\homemade-food\images\shreyak-singh-gFB1IPmH6RE-unsplash.jpg">
+      <h4>Idli</h4>
+      <p>₹40</p>
+      <button class="add-btn" onclick="addToCart('Idli',40)">Add</button>
+    </div>
+
+    <div class="menu-card">
+      <img src="C:\Users\DELL\OneDrive\Desktop\homemade-food\images\deepal-tamang-5oF7d_hPJG4-unsplash.jpg">
+      <h4>Dosa</h4>
+      <p>₹50</p>
+      <button class="add-btn" onclick="addToCart('Dosa',50)">Add</button>
+    </div>
+
+    <div class="menu-card">
+      <img src="C:\Users\DELL\OneDrive\Desktop\homemade-food\images\viraj-sawant-EGNB5qZfscw-unsplash.jpg">
+      <h4>Chapati</h4>
+      <p>₹30</p>
+      <button class="add-btn" onclick="addToCart('Chapati',30)">Add</button>
+    </div>
+
+  </div>
+
+  <div class="cart">
+  <h3>🛒 Cart</h3>
+
+  <ul id="cartItems"></ul>
+
+  <p><b>Total ₹<span id="total">0</span></b></p>
+
+  <button class="place-order-btn" onclick="placeOrder()">
+    Place Order
+  </button>
+</div>
+
+
+</div>
+
+<script src="js/cart.js"></script>
+</body>
+</html>
